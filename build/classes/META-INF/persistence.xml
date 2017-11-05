@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	version="2.0">
+
+	<persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
+
+		<provider>
+			org.hibernate.ejb.HibernatePersistence
+		</provider>
+
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="supinfo" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/supcommerce" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+</persistence>
+  <!-- The persistence unit is the key element of the JPA Entity technology
+It “persists” entities in the database.
+Requires a persistence provider and other configurations inside a special file : persistence.xml
+ -->  
